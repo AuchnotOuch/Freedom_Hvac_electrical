@@ -1,0 +1,25 @@
+/* /src/index.css */
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Reset margin and padding for all elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.css-hvavy1 {
+  margin: 0 !important;
+  padding: 0 !important;
+}

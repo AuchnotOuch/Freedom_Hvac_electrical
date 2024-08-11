@@ -1,0 +1,77 @@
+/* /src/pages/Home.css */
+
+.home-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    /* background-image: url(/public/images/americanflag.jpg); */
+    /* background-size: cover; */
+    /* Add this to make the container the reference point */
+}
+
+.image-container {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.blended-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.text-container {
+    flex: 1;
+    padding: 0 2rem;
+    position: relative;
+    /* Add this to position the ribbon inside the text container */
+}
+
+.text-container h1,
+.text-container p {
+    color: #333;
+}
+
+/* Creating the blend effect */
+.blended-image {
+    clip-path: polygon(0 0, 90% 0, 50% 100%, 0% 100%);
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+    }
+
+    .text-container {
+        padding: 1rem;
+    }
+
+    .blended-image {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+.ribbon {
+    width: 150px;
+    position: absolute;
+    /* Positioning the ribbon absolutely */
+    left: -150px;
+    /* Move the ribbon 50px to the left of the container's left edge */
+    top: 50%;
+    /* Center vertically */
+    transform: translateY(5%);
+    /* Adjust the centering */
+}

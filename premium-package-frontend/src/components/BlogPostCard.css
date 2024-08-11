@@ -1,0 +1,70 @@
+/* /src/components/BlogPostCard.css */
+
+.card {
+    perspective: 1000px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    position: relative;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent black background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-front:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-back {
+    z-index: 1;
+    transform: rotateY(180deg);
+    overflow-y: auto;
+}
+
+.card.flipped .card-front {
+    transform: rotateY(-180deg);
+}
+
+.card.flipped .card-back {
+    transform: rotateY(0deg);
+}
