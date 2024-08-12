@@ -4,6 +4,11 @@ import serviceRoutes from './routes/serviceRoutes.js';
 import teamRoutes from './routes/teamRoutes.js';
 import blogRoutes from './routes/blogRoutes.js';
 import authRoutes from './routes/authRoutes.js';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
@@ -23,6 +28,15 @@ app.use('/api/auth', authRoutes);
 app.use((err, req, res, next) => {
     res.status(500).json({ message: err.message });
 });
+
+// Serve static files from the React app in production
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.resolve(__dirname, '../../premium-package-frontend/build')));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, '../../premium-package-frontend/build', 'index.html'));
+    });
+}
 
 const PORT = process.env.PORT || 5000;
 
