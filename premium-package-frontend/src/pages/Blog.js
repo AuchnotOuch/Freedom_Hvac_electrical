@@ -20,7 +20,7 @@ const Blog = () => {
             <Heading as="h1" mb={6} textAlign="center">
                 Blog
             </Heading>
-            <Grid templateColumns="repeat(auto-fit, minmax(300px, 1fr))" gap={6}>
+            <Grid justifyContent='center' alignItems='center' width="100vw" templateColumns="repeat(auto-fit, minmax(300px, 1fr))" gap={6}>
                 {blogPosts.map((post) => (
                     <GridItem key={post._id}>
                         <BlogPostCard

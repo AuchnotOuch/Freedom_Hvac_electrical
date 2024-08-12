@@ -17,10 +17,10 @@ const Services = () => {
 
     return (
         <Box>
-            <Heading as="h1" mb={6} textAlign="center">
+            <Heading width='100vw' textAlign='center' as="h1" mb={6}>
                 Our Services
             </Heading>
-            <Grid templateColumns="repeat(auto-fit, minmax(300px, 1fr))" gap={6}>
+            <Grid width={'100vw'} justifyContent='center' alignItems='center' templateColumns="repeat(auto-fit, minmax(300px, 1fr))" gap={6}>
                 {services.map((service) => (
                     <GridItem key={service._id}>
                         <ServiceCard

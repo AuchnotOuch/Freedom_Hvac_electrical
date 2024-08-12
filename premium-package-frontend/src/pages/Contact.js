@@ -4,7 +4,7 @@ import { Box, Heading, FormControl, FormLabel, Input, Textarea, Button } from '@
 
 const Contact = () => {
     return (
-        <Box maxW="600px" mx="auto">
+        <Box pl={24} alignItems={'center'} justifyContent='center' maxW="600px" mx="auto">
             <Heading as="h1" mb={6} textAlign="center">
                 Contact Us
             </Heading>

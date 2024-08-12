@@ -17,7 +17,7 @@ const About = () => {
 
     return (
         <Box>
-            <Flex direction={'column'} justify={"center"} align={"center"}>
+            <Flex width={'100vw'} direction={'column'} justify={"center"} align={"center"}>
                 <Heading as="h1" mb={6} textAlign="center">
                     About Us
                 </Heading>
@@ -26,10 +26,10 @@ const About = () => {
                     We are a dedicated team of HVAC and Electrical service professionals committed to providing top-notch solutions for your home and business.
                 </Text>
             </Flex>
-            <Heading as="h2" size="lg" mb={4}>
+            <Heading textAlign={'center'} as="h2" size="lg" mb={4}>
                 Meet Our Team
             </Heading>
-            <Grid templateColumns="repeat(auto-fit, minmax(300px, 1fr))" gap={6} p={10}>
+            <Grid justifyContent={"center"} alignItems={'center'} width={'100vw'} templateColumns="repeat(auto-fit, minmax(300px, 1fr))" gap={6} p={10}>
                 {teamMembers.map((member) => (
                     <GridItem key={member._id}>
                         <TeamMemberCard

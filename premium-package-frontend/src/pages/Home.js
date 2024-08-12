@@ -6,7 +6,7 @@ import './Home.css'; // Import the CSS file
 
 const Home = () => {
     return (
-        <Box margin='0' padding='0' display="flex" alignItems="center" className="home-container">
+        <Box justifyContent='center' margin='0' padding='0' display="flex" alignItems="center" className="home-container">
             {/* Left Section with Image */}
             <Box flex="1" className="image-container">
                 <Image src="/images/worker1.jpg" alt="American Flag" className="blended-image" />

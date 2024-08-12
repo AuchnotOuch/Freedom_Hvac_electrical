@@ -1,7 +1,7 @@
 /* /src/pages/Home.css */
 
 .home-container {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -11,9 +11,6 @@
     padding: 0;
     box-sizing: border-box;
     position: relative;
-    /* background-image: url(/public/images/americanflag.jpg); */
-    /* background-size: cover; */
-    /* Add this to make the container the reference point */
 }
 
 .image-container {
